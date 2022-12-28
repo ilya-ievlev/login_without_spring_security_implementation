@@ -16,7 +16,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User findById(int id) throws DAOException {
         for(User user: userList){
-            if (user.getUserId() == id){
+            if (user.getId() == id){
                 return user;
             }
         }
@@ -36,7 +36,7 @@ public class UserDaoImpl implements UserDao {
         }
         int i = 0;
         while (i<collectionSize) {
-            if(userList.get(i).getUserId()==id){
+            if(userList.get(i).getId()==id){
                 break;
             }
                 i++;
@@ -52,7 +52,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getByLogin(String login){
         for(User user: userList){
-            if (user.getUserLogin().equals(login)){
+            if (user.getLogin().equals(login)){
                 return user;
             }
         }

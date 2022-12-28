@@ -14,6 +14,11 @@ import java.io.IOException;
 public abstract class AbstractCommand {
     protected UserDao userDao = new UserDaoImpl();
 
+    protected static final String ID = "id";
+    protected static final String USER = "user";
+    protected static final String LOGIN = "login";
+    protected static final String PASSWORD = "password";
+
     public abstract void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, DAOException;
 
     protected void forwardRequest(String jspPath, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

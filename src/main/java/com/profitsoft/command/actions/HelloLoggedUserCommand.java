@@ -12,8 +12,7 @@ import java.io.IOException;
 public class HelloLoggedUserCommand extends AbstractCommand {
 
     private static final String HELLO_PAGE_LOGGED_USER_JSP = "/WEB-INF/views/helloPageLoggedUser.jsp";
-    private static final String ID = "id";
-    private static final String USER = "user";
+
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, DAOException {

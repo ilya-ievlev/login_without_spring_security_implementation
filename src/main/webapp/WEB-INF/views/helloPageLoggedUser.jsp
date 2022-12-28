@@ -10,7 +10,7 @@
     <input type="submit" value="logout">
 </form>
 <form method="get" action="${pageContext.request.contextPath}/secured/getUserList">
-    <input hidden="true" value="${user.userId}" name="userId">
+    <input hidden="true" value="${user.id}" name="id">
     <input type="submit" value="list of users">
 </form>
 </body>

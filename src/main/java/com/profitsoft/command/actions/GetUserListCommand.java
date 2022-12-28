@@ -14,11 +14,10 @@ public class GetUserListCommand extends AbstractCommand {
 
     private static final String USER_LIST_JSP = "/WEB-INF/views/userList.jsp";
     private static final String USER_LIST = "userList";
-    private static final String USER = "user";
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, DAOException {
-        int currentUserId = Integer.parseInt(request.getParameter("userId"));
+        int currentUserId = Integer.parseInt(request.getParameter(ID));
         User user = userDao.findById(currentUserId);
         request.setAttribute(USER, user);
         List<User> userList = userDao.findAll();

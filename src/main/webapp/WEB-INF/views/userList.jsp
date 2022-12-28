@@ -7,12 +7,12 @@
 <body>
 <c:forEach var="user" items="${userList}">
     username: <c:out value="${user.name}"/> <br>
-    login: <c:out value="${user.userLogin}"/><br>
+    login: <c:out value="${user.login}"/><br>
     ================================<br>
 </c:forEach>
 
 <form method="get" action="${pageContext.request.contextPath}/secured/helloLoggedUser">
-    <input hidden="true" value="${user.userId}" name="id">
+    <input hidden="true" value="${user.id}" name="id">
     <input type="submit" value="return">
 </form>
 </body>

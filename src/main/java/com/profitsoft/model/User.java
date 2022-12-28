@@ -3,43 +3,43 @@ package com.profitsoft.model;
 import java.util.Objects;
 
 public class User {
-    private int userId;
-    private String userLogin;
-    private String userPassword;
+    private int id;
+    private String login;
+    private String password;
     private String name;
 
-    public User(int userId, String userLogin, String userPassword, String name) {
-        this.userLogin = userLogin;
-        this.userPassword = userPassword;
+    public User(int id, String login, String password, String name) {
+        this.login = login;
+        this.password = password;
         this.name = name;
-        this.userId = userId;
+        this.id = id;
     }
 
     public User() {
     }
 
-    public int getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getUserLogin() {
-        return userLogin;
+    public String getLogin() {
+        return login;
     }
 
-    public void setUserLogin(String userLogin) {
-        this.userLogin = userLogin;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
@@ -55,11 +55,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(userLogin, user.userLogin) && Objects.equals(userPassword, user.userPassword) && Objects.equals(name, user.name);
+        return Objects.equals(login, user.login) && Objects.equals(password, user.password) && Objects.equals(name, user.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userLogin, userPassword, name);
+        return Objects.hash(login, password, name);
     }
 }

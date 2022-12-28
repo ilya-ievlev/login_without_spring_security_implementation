@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class IsUserLoggedFilterImpl implements Filter {
 
-    private static final String USER_LOGIN = "userLogin";
+    private static final String USER_LOGIN = "login";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
